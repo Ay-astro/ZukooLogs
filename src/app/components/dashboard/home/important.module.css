@@ -1,0 +1,29 @@
+.scrollContainer {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: var(--login); 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.scrollText {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-left 15s linear infinite;
+    font-size: calc(0.4vw + 0.6rem);
+    color: var(--primaryColor);
+    width: 100%;
+    gap: 50px;
+}
+
+@keyframes scroll-left {
+    0% {
+    transform: translateX(100%);
+    }
+    100% {
+    transform: translateX(-60%);
+    }
+}

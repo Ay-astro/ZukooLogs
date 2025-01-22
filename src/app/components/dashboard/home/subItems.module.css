@@ -1,0 +1,152 @@
+.subItems{
+    margin-bottom: 20px;
+}
+.itemtitle{
+    width: 100%;
+}
+.itemtitle thead{
+    background: var(--primaryBackground);
+}
+.itemtitle thead tr th{
+    padding: 10px;
+    border-right: 2px solid white;
+    color: var(--primaryColor);
+    font-size: calc(0.4vw + 9px);
+}
+.itemtitle thead tr th:first-child{
+    width: 60%;
+    text-align: left;
+}
+.itemtitle tbody tr td {
+    text-align: center;
+    border-right: 1px solid #6c63ff;
+    border-bottom: 1px solid lightgrey;
+    
+} 
+.itemtitle tbody tr td:first-child{
+    text-align: left;
+    display: flex;
+    border-left: 1px solid #6c63ff;
+    padding: 20px 20px 20px;
+    gap: 20px;
+}
+.subItenText h4{
+    font-size:calc(0.4vw + 8px ) ;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.subItenText p{
+    font-size: calc(0.3vw + 8px);
+}
+.stockIcon{
+    color:#6c63ff ;
+    margin: 10px 0;
+}
+.available, .buy{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: calc(0.3vw + 7px);
+}
+.buy{
+    border: 1px solid var(--login);
+}
+.available{
+    border: 1px solid #6c63ff;
+}
+.buy i{
+    margin-right: 3px;
+}
+.buybtn{
+    padding:10px;
+    outline: none;
+    border: none;
+    background: #6c63ff;
+    color:var(--primaryColor);
+    border-radius: 5px;
+}
+.buybtn:hover{
+    cursor: pointer;
+}
+.buybtn:disabled{
+    background-color: #ccc; /* Grey color for disabled */
+    color: #666; /* Darker text color */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+    opacity: 0.7;
+}
+
+
+/* Mobile view for the buy Available and buy Button {ABB} */
+.mobilebtn{
+    display: none;
+}
+.mobileABB{
+    margin:15px 0;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    
+}
+.availableMoblie, .buyMobile{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: calc(0.4vw + 9px);
+}
+.buyMobile{
+    border: 1px solid var(--login);
+}
+.availableMoblie{
+    border: 1px solid #6c63ff;
+}
+.buyMobile i{
+    margin-right: 3px;
+}
+.buybtnMobile{
+    padding:7px;
+    outline: none;
+    border: none;
+    background: #6c63ff;
+    color:var(--primaryColor);
+    border-radius: 5px;
+    width: 100%;
+}
+.buybtnMobile i{
+    margin-right: 3px;
+}
+
+@media (max-width:1120px) {
+    /* table heading */
+    .itemtitle thead tr th{
+        display: none;
+    }
+    .itemtitle thead tr th:first-child{
+        display: block;
+        border-right: none;
+        font-size: calc(0.5vw + 12px);
+        width: 100%;
+    }
+    /* table data */
+    .itemtitle tbody tr td {
+        display: none;
+        
+    } 
+    .itemtitle tbody tr td:first-child{
+        display: flex;
+        padding: 7px;
+        gap: 7px;
+    }
+    .mobilebtn{
+        display: block;
+    }
+    .stockIcon i{
+        font-size: 16px;
+    }
+
+    .subItenText h4{
+        font-size:calc(0.5vw + 10px ) ;
+        margin-bottom: 10px;
+    }
+    .subItenText p{
+        font-size: calc(0.4vw + 9px);
+    }
+}
+

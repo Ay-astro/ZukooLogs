@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import FontAwesomeConfig from "./fontawesome";
+import {IndexProvider} from "./IndexContext";
+import LayoutWrapper from "./Layoutwraper";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,10 +26,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <IndexProvider>
+      <html lang="en">
+      <head>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <FontAwesomeConfig/>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+            <LayoutWrapper>
+            {children}
+            </LayoutWrapper>
       </body>
     </html>
+    </IndexProvider>
   );
 }

@@ -1,0 +1,107 @@
+/* Main container styling */
+.main {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Center the authcontainer on the screen */
+.authcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  min-height: 60vh; /* Set a minimum height for responsiveness */
+  max-height: 90vh; /* Prevent excessive height */
+  padding: 30px 20px; /* Increase padding for better spacing */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and heading styling */
+.loginH4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Add spacing between the heading and form */
+}
+
+.loginH4 img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px; /* Add spacing below the logo */
+}
+
+.loginH4 h2 {
+  margin: 0;
+  color: #333;
+}
+
+/* Form styling */
+.authform {
+  width: 100%;
+  margin-bottom: 20px; /* Add space below the form */
+}
+
+.formgroup {
+  margin-bottom: 20px; /* Increase spacing between form fields */
+}
+
+.formgroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+}
+
+.formgroup input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Login button styling */
+.authbutton {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.authbutton:hover {
+  background-color: #0056b3;
+}
+
+/* Text and link styling */
+.authcontainer p {
+  margin-top: 20px; /* Increase spacing above the text */
+  margin-bottom: 0; /* Prevent extra space below the text */
+  color: #777;
+  text-align: center;
+}
+
+.authcontainer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.authcontainer a:hover {
+  text-decoration: underline;
+}

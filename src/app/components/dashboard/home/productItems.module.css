@@ -1,0 +1,22 @@
+.productItems, .productItems ul{
+    width: 100%;
+}
+
+.productItems ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primaryBackground);
+    margin: 10px 0;
+    color: var(--primaryColor);
+    padding: 12px 0;
+    font-weight: bold;
+    font-size: calc(0.32vw + 0.6rem);;
+}
+.productItems ul li:first-child{
+    margin-top: 40px;
+}
+.productItems ul li:hover{
+    cursor: pointer;
+}

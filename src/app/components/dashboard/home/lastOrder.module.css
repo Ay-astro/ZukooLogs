@@ -1,0 +1,71 @@
+.lastOrderContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 3%;
+    margin-bottom: 30px;
+}
+.lastContain{
+    width: 50%;
+    height: 50vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: var(--primaryColor);
+
+}
+.LastOrder{
+    background: var(--primaryBackground);
+    padding: 10px;
+    color: var(--primaryColor);
+    font-size: calc(0.4vw + 10px) ;
+}
+/* .LastOrder h{
+    background: var(--primaryBackground);
+} */
+.lastContain table{
+    width: 100%;
+    padding: 0 5px;
+}
+.lastContain table tbody tr td{
+    padding: 20px;
+    border-left: 1px solid #6c63ff ;
+    border-right: 1px solid #6c63ff ;
+    border-bottom: 1px solid #6c63ff ;
+    background: #f3f4f6;
+}
+.lastContain table tbody tr td:first-child{
+    width: 60%;
+    border-right: none;
+    font-size: calc(0.4vw + 7px);
+}
+.lastContain table tbody tr td:last-child{
+    text-align: center;
+}
+.y{
+    color: green;
+    font-weight: bold;
+}
+.number{
+    color: var(--login);
+    font-weight: bold;
+}
+.amount{
+    color:#6c63ff;
+    font-weight: bold;
+}
+.time{
+    padding: 5px 10px;
+    font-size: calc(0.3vw + 5px );
+    text-align: center;
+    background: #6c63ff;
+    color: var(--primaryColor);
+    border-radius: 5px;
+}
+@media (max-width:900px) {
+    .lastOrderContainer{
+        flex-direction: column;
+    }
+    .lastContain{
+        width: 100%;
+    }
+}

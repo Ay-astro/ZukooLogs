@@ -1,0 +1,111 @@
+.purchasehistorycontainer {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    width: 95%;
+    margin: 150px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .backbutton {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .backbutton:hover {
+    background-color: #e04b4b;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .tablecontainer {
+    overflow-x: auto;
+  }
+  
+  .historytable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .historytable th,
+  .historytable td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .historytable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .actionbutton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .actionbutton:hover {
+    background-color: #0056b3;
+  }
+
+  .seemorebutton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .seemorebutton:hover {
+    background-color: #0056b3;
+  }
+  
+  .downloadbutton {
+    background-color: #ffb400;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .downloadbutton:hover {
+    background-color: #e09c00;
+  }
+  
+  .deletebutton {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .deletebutton:hover {
+    background-color: #cc0000;
+  }
+
+
+@media (max-width:720px) {
+    .purchasehistorycontainer {
+        margin:50px auto;
+      }
+}

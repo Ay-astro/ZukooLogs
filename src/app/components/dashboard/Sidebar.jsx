@@ -40,7 +40,7 @@ const Sidebar = () => {
           </Link>
         </li>
         <li>
-          <Link href="#" className="nav-item">
+          <Link href="/purchase" className="nav-item">
             <span className="nav-icon"><i className="fas fa-user"></i></span>
             <span className='icon-item'>Purchase History</span>
           </Link>

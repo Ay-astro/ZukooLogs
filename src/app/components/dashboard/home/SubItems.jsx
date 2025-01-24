@@ -1,10 +1,13 @@
 'use clinet'
-import { useState,useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styles from '../home/subItems.module.css'
-
+import { useContext } from "react";
+import IndexContext from '@/app/IndexContext';
 
 function SubItems({item}) {
+    const {setPrice,handlebuy}= useContext(IndexContext)
+
+
     const {id,name,subCategories} = item
 
   return (
@@ -51,7 +54,7 @@ function SubItems({item}) {
                                     <span className={styles.availableMoblie}>Available: {item.available}</span>
                                 </div>
                                 <div>
-                                    <button className={styles.buybtnMobile}><i class="fa-solid fa-cart-shopping fa-lx"></i>{item.available <1 ?'Out Of Stock' : 'Buy Now'}</button>
+                                    <button className={styles.buybtnMobile} onClick={()=>handlebuy(item,id)}><i class="fa-solid fa-cart-shopping fa-lx"></i>{item.available <1 ?'Out Of Stock' : 'Buy Now'}</button>
                                 </div>
                                 </div>
                                 </div>
@@ -67,7 +70,7 @@ function SubItems({item}) {
                             </td>
                             <td>
                                 <div>
-                                <button className={styles.buybtn} disabled={item.available < 1  ? true: false}><i class="fa-solid fa-cart-shopping fa-lx"></i>{item.available <1 ?'Out Of Stock' : 'Buy Now'}</button>
+                                <button className={styles.buybtn} disabled={item.available < 1  ? true: false} onClick={()=>handlebuy(item,id)}><i class="fa-solid fa-cart-shopping fa-lx"></i>{item.available <1 ?'Out Of Stock' : 'Buy Now'}</button>
                                 </div>
                             </td>
                         </tr>

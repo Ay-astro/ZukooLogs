@@ -36,7 +36,7 @@
     padding: 12px 25px;
     border-radius: 10px;
 }
-.loginBtn:hover{
+.loginBtn a:hover{
     cursor: pointer;
 }
 .loginBtn a{

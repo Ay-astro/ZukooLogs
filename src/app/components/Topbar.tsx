@@ -21,7 +21,7 @@ function topbar() {
             </div>
             <div className={styles.login}>
               <button className={styles.loginBtn} onClick={handleLogin}>
-                <a href="#"><p>{login?'Logout': 'Login' }</p></a>
+                <a href="/login"><p>{login?'Logout': 'Login' }</p></a>
               </button>
             </div>
         </div>

@@ -204,6 +204,10 @@ export const productFullData =[
         ]
     },
 ]
-
+export const purchaseData = [
+    { id: 1, product: "Laptop", amount: "$1000", pay: "Paid", time: "2025-01-20", action: "View" },
+    { id: 2, product: "Headphones", amount: "$200", pay: "Paid", time: "2025-01-21", action: "View" },
+    { id: 3, product: "Keyboard", amount: "$50", pay: "Pending", time: "2025-01-22", action: "Retry" },
+]
 
 export default productdata

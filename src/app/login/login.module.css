@@ -105,3 +105,13 @@
 .authcontainer a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 720px) {
+  .authcontainer {
+    margin: 0 20px; /* Add 20px margin on the left and right */
+  }
+
+  .authform {
+    padding: 0 10px; /* Add padding inside the form for extra spacing */
+  }
+}

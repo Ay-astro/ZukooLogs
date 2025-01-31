@@ -52,11 +52,11 @@ function BuyStock() {
             <label>Number of Items:</label>
             <input
               type="number"
-              min=""
               value={quantity}
               placeholder='Enter the Quantity you want to buy'
-              onChange={(e) => setQuantity(Number(e.target.value))}
+              onChange={(e) => setQuantity((e.target.value))}
               className={styles.input}
+              required
             />
           </div>
           <div className={styles.total}>Total: &#8358;{total}</div>

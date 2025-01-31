@@ -284,6 +284,12 @@ color: rgb(224, 224, 224);
 .overlay.closeOverlay{
   display: none;
 }
+
+
+
+
+
+
 @media screen and (max-width:1200px) {
   .sidebar{
     display: none;

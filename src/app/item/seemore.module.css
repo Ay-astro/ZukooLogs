@@ -1,0 +1,116 @@
+/* Container */
+.ordercontainer {
+    width: 70%;
+    margin: 150px auto 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Title & Order ID */
+  .ordercontainer h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .tablecomtainer{
+    overflow-x: auto;
+  }
+  .orderid {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Group */
+  .buttongroup {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .downloadbtn,
+  .copyallbtn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .downloadbtn {
+    background: #28a745;
+  }
+  
+  .copyallbtn {
+    background: #007bff;
+  }
+  
+  .downloadbtn:hover {
+    background: #218838;
+  }
+  
+  .copyallbtn:hover {
+    background: #0056b3;
+  }
+  
+  .icon {
+    margin-right: 5px;
+  }
+  
+  /* Table */
+  .ordertable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .ordertable th,
+  .ordertable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .ordertable th {
+    background: #f4f4f4;
+  }
+  
+  /* Resource Box */
+  .resourcebox {
+    background: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  /* Copy Button */
+  .copybtn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .copybtn:hover {
+    background: #c82333;
+  }
+  
+
+  @media (max-width:720px) {
+    .ordercontainer{
+      margin:50px auto;
+      width: 90%;
+    }
+  }

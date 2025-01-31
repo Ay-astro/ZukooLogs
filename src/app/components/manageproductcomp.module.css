@@ -1,0 +1,134 @@
+.container{
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    width: 95%;
+    margin: 150px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+.container h1{
+        font-size: calc(0.6vw + 12px);
+        margin-bottom:20px ;
+    }
+  .createButton {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .tablecontainer {
+    overflow-x: auto;
+  }
+  .table th,
+  .table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+    font-size: calc(0.4vw + 9px);
+  }
+  .table th{
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  .editButton {
+    padding: 5px 10px;
+    background-color: #f0ad4e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size:calc(0.4vw + 9px) ;
+  }
+  .deleteButton {
+    padding: 5px 10px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: calc(0.4vw + 9px);
+  }
+  .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  .modal h2{
+    font-size: calc(0.5vw + 15px);
+    margin-bottom: 5px;
+  }
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  .input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .textarea {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: none;
+  }
+  .submitButton {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  @media (max-width:720px) {
+    .container{
+      margin:50px auto;
+    }
+    .createButton{
+      margin: 8px 0;
+    }
+    .overlay{
+      padding: 0 7px;
+    }
+    .formGroup label{
+      font-size: calc(0.5vw + 12px);
+    }
+  }

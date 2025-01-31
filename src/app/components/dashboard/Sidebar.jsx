@@ -4,13 +4,14 @@ import { useState,useContext } from 'react';
 import IndexContext from '@/app/IndexContext';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBuildingColumns} from '@fortawesome/free-solid-svg-icons'
-import productdata from './productdata'
+import {productFullData} from './productdata'
 
 
 const Sidebar = () => {
-  const {setIsCollapsed,isCollapsed}= useContext(IndexContext)
+  const {setIsCollapsed,isCollapsed,handleSubitems}= useContext(IndexContext)
     const [activeDropdown, setActiveDropdown] = useState(null);
-    const [product, setProduct] = useState(productdata)
+    const [product, setProduct] = useState(productFullData)
+    const [isAdmin, setAdmin ] = useState(true)
     
 
     const toggleSidebar = () => {
@@ -34,9 +35,9 @@ const Sidebar = () => {
       </div>
       <ul className="nav-links">
         <li>
-          <Link href="#" className="nav-item">
+          <Link href="/" className="nav-item">
             <span className="nav-icon"><i className="fas fa-home"></i></span>
-            <span className='icon-item'>Dashboard</span>
+            <span className='icon-item'>Home</span>
           </Link>
         </li>
         <li>
@@ -56,28 +57,33 @@ const Sidebar = () => {
           <ul className="dropdown-menu">
             {
               product.map((items)=>(
-                <li><Link href="#" className="dropdown-item" key={items.id}>{items.name}</Link></li>
+                <li><Link href="#" className="dropdown-item" key={items.id} onClick={()=>handleSubitems(items.id)}>{items.subname}</Link></li>
               ))
             }
           </ul>
         </li>
         <li>
-          <Link href="#" className="nav-item">
+          <Link href="https://chat.whatsapp.com/Fgp2zg0Nm7J4r68xVHrWIS" className="nav-item" target='_blank'>
             <span className="nav-icon"><i className="fa-brands fa-whatsapp fa-lg"></i></span>
             <span className='icon-item'>Whatsapp Community</span>
           </Link>
         </li>
         <li>
-          <Link href="#" className="nav-item">
+          <Link href="https://t.me/+_yPjLgW7hwYxZGU0
+" className="nav-item" target='_blank'>
             <span className="nav-icon"><i className="fa-brands fa-telegram fa-lg"></i></span>
             <span className='icon-item'>Telegram Channel</span>
           </Link>
         </li>
         <li>
           {!isCollapsed && <p className='others'>RECHARGE</p> }
-          <Link href="#" className="nav-item">
+          <Link href="/manualpayment" className="nav-item" >
             <span className="nav-icon"><FontAwesomeIcon icon={faBuildingColumns} /></span>
             <span className='icon-item'>Manual Payment</span>
+          </Link>
+          <Link href="/manualtransaction" className="nav-item" >
+            <span className="nav-icon"><FontAwesomeIcon icon={faBuildingColumns} /></span>
+            <span className='icon-item'>Manual Transactions</span>
           </Link>
         </li>
         <li>
@@ -93,6 +99,42 @@ const Sidebar = () => {
             <span className='icon-item'>Customer Care</span>
           </Link>
         </li>
+        {
+          isAdmin &&(
+            <ul>
+        <li>
+        <Link href="/manageproduct" className="nav-item">
+          <span className="nav-icon"><i class="fa-solid fa-bars-progress"></i></span>
+          <span className='icon-item'>Manage Products</span>
+        </Link>
+      </li>
+      <li>
+        <Link href="/manageproductcategory" className="nav-item">
+          <span className="nav-icon"><i class="fa-solid fa-bars-progress"></i></span>
+          <span className='icon-item'>Manage Category</span>
+        </Link>
+      </li>
+      <li>
+        <Link href="/manageproductitems" className="nav-item">
+          <span className="nav-icon"><i class="fa-solid fa-bars-progress"></i></span>
+          <span className='icon-item'>Manage Items</span>
+        </Link>
+      </li>
+      <li>
+          <Link href="/mangemanualtransaction" className="nav-item">
+            <span className="nav-icon"><i class="fa-solid fa-plus"></i></span>
+            <span className='icon-item'>Manual Transaction</span>
+          </Link>
+        </li>
+      <li>
+        <Link href="/transactionhistory" className="nav-item">
+          <span className="nav-icon"><i class="fa-solid fa-bars-progress"></i></span>
+          <span className='icon-item'>Transaction History</span>
+        </Link>
+      </li>
+            </ul>
+          )
+        }
         
       </ul>
     </div>

@@ -28,11 +28,12 @@ function Disclimer() {
             <div className={styles.disclimerDiv}>
             <h4 className={styles.disclimerTitle}>Customer Care</h4>
             <ul className={styles.customercare}>
-                <li><a href="#">
+                <li><a href="https://wa.me/message/EN46VSWDDR5HG1" target='_blank'>
                 <i className="fa-brands fa-whatsapp fa-xl"></i>
                     <span>Whatsapp</span></a></li>
-                <li> <a href="#"><i className="fa-brands fa-whatsapp fa-xl"></i><span>Whatsapp Group</span></a></li>
-                <li><a href="#"><i className="fa-brands fa-telegram fa-xl"></i><span>Telegram</span></a></li>
+                <li> <a href="https://chat.whatsapp.com/Fgp2zg0Nm7J4r68xVHrWIS" target='_blank'><i className="fa-brands fa-whatsapp fa-xl"></i><span>Whatsapp Group</span></a></li>
+                <li><a href="https://t.me/+_yPjLgW7hwYxZGU0
+" target='_blank'><i className="fa-brands fa-telegram fa-xl"></i><span>Telegram</span></a></li>
             </ul>
             </div>
         </div>

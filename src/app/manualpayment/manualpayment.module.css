@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  .card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    height: 70%;
+    width: 55%;
+    margin: 150px auto;
+  }
+  .iconWrapper {
+    margin-bottom: 20px;
+    font-size: 7rem;
+  }
+  .accountDetails {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: left;
+  }
+  .copyIcon {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #007bff;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .formGroup {
+    text-align: left;
+  }
+  .input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .submitButton {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  @media (max-width:720px) {
+    .container {
+      display: flex;
+      justify-content:center;
+      align-items: flex-start;
+      padding: 0 20px;
+    }
+    .submitButton {
+      width: 50%;
+    }
+    .card {
+      background-color:transparent;
+      height: 100%;
+      width: 95%;
+      margin: 20px auto;
+      padding: 0px;
+      border-radius:0;
+      box-shadow: none;
+    }
+    .iconWrapper {
+      margin-bottom: 10px;
+      font-size: 5rem;
+    }
+    .formGroup label{
+      font-size: calc(0.5vw + 10px);
+    }
+    .accountDetails p{
+      font-size: calc(0.5vw + 12px);
+    }
+  }

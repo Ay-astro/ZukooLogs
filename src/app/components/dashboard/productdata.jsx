@@ -1,32 +1,32 @@
 const productdata= [
-    {name:'COUNTRIES FACEBOOK',
+    {subname:'COUNTRIES FACEBOOK',
         id: 1,
     },
-    {name:'USA FACEBOOK',
+    {subname:'USA FACEBOOK',
     id: 2,
     },
-    {name:'COUNTRIES FB(50 FRIENDS)',
+    {subname:'COUNTRIES FB(50 FRIENDS)',
     id: 3,
     },
-    {name:'DATING FACEBOOK',
+    {subname:'DATING FACEBOOK',
     id: 4,
     },
-    {name:'RANDOM COUNTRIES FACEBOOK',
+    {subname:'RANDOM COUNTRIES FACEBOOK',
     id: 5,
     },
-    {name:'INSTAGRAM',
+    {subname:'INSTAGRAM',
     id: 6,
     },
-    {name:'USA TEXTING NUMBER',
+    {subname:'USA TEXTING NUMBER',
     id: 7,
     },
-    {name:'TWITTER/X',
+    {subname:'TWITTER/X',
     id: 8,
     },
-    {name:'GMAIL',
+    {subname:'GMAIL',
     id: 9,
     },
-    {name:'TIKTOK',
+    {subname:'TIKTOK',
     id: 10,
     },
 ]
@@ -35,6 +35,7 @@ const productdata= [
 export const productFullData =[
     {   id: 1,
         name:'TWITTER(X)',
+        subname:'TWITTER/X',
         subCategories:[
             {
                 title: 'Twitter old account, Registration 2009-2015, Verified by email contains mail password(hotmail.com), opened 2FA (Followers 0-50)',
@@ -52,6 +53,7 @@ export const productFullData =[
     },
     {   id:2,
         name:'COUNTRIES FACEBOOK',
+        subname:'COUNTRIES FACEBOOK',
         subCategories:[
             {
                 title: 'FRANCE COUNTRY FACEBOOK(50-5000 friend)',
@@ -69,6 +71,7 @@ export const productFullData =[
     },
     {   id: 3,
         name:'USA FACEBOOK',
+        subname:'USA FACEBOOK',
         subCategories:[
             {
                 title: 'FRANCE COUNTRY FACEBOOK(50-5000 friend)',
@@ -86,6 +89,7 @@ export const productFullData =[
     },
     {   id: 4,
         name:'COUNTRIES FACEBOOK(BELOW 50 FRIENDS)',
+        subname:'COUNTRIES FB(50 FRIENDS)',
         subCategories:[
             {
                 title: 'FRANCE COUNTRY FACEBOOK(50-5000 friend)',
@@ -103,6 +107,7 @@ export const productFullData =[
     },
     {   id: 5,
         name:'DATING FACEBOOK',
+        subname:'DATING FACEBOOK',
         subCategories:[
             {
                 title: 'FRANCE COUNTRY FACEBOOK(50-5000 friend)',
@@ -120,6 +125,7 @@ export const productFullData =[
     },
     {   id: 6,
         name:'RANDOM COUNTRIES FACEBOOK',
+        subname:'RANDOM COUNTRIES FACEBOOK',
         subCategories:[
             {
                 title: 'FRANCE COUNTRY FACEBOOK(50-5000 friend)',
@@ -137,6 +143,7 @@ export const productFullData =[
     },
     {   id: 7,
         name:'INSTAGRAM',
+        subname:'INSTAGRAM',
         subCategories:[
             {
                 title: 'FRANCE COUNTRY FACEBOOK(50-5000 friend)',
@@ -154,6 +161,7 @@ export const productFullData =[
     },
     {   id: 8,
         name:'USA TEXTING NUMBER USA',
+        subname:'USA TEXTING NUMBER',
         subCategories:[
             {
                 title: 'FRANCE COUNTRY FACEBOOK(50-5000 friend)',
@@ -171,6 +179,7 @@ export const productFullData =[
     },
     {   id: 9,
         name:'GMAIL',
+        subname:'GMAIL',
         subCategories:[
             {
                 title: 'FRANCE COUNTRY FACEBOOK(50-5000 friend)',
@@ -188,6 +197,7 @@ export const productFullData =[
     },
     {   id: 10,
         name:'TIKTOK',
+        subname:'TIKTOK',
         subCategories:[
             {
                 title: 'FRANCE COUNTRY FACEBOOK(50-5000 friend)',
@@ -205,7 +215,7 @@ export const productFullData =[
     },
 ]
 export const purchaseData = [
-    { id: 1, product: "Laptop", amount: "$1000", pay: "Paid", time: "2025-01-20", action: "View" },
+    { id: 1, product: "Laptop", amount: "$1000", pay: "Paid", time: "2025-01-20", action: "View", },
     { id: 2, product: "Headphones", amount: "$200", pay: "Paid", time: "2025-01-21", action: "View" },
     { id: 3, product: "Keyboard", amount: "$50", pay: "Pending", time: "2025-01-22", action: "Retry" },
 ]

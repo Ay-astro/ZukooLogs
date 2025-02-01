@@ -8,19 +8,10 @@ import {productFullData} from './productdata'
 
 
 const Sidebar = () => {
-  const {setIsCollapsed,isCollapsed,handleSubitems}= useContext(IndexContext)
-    const [activeDropdown, setActiveDropdown] = useState(null);
-    const [product, setProduct] = useState(productFullData)
-    const [isAdmin, setAdmin ] = useState(true)
-    
+  const {isCollapsed,handleSubitems,isAdmin,product,activeDropdown,toggleSidebar,toggleDropdown}= useContext(IndexContext)
 
-    const toggleSidebar = () => {
-        setIsCollapsed(!isCollapsed);
-    };
 
-  const toggleDropdown = (index) => {
-    setActiveDropdown(activeDropdown === index ? null : index);
-  };
+
 
   return (
     <div className={`sidebar ${isCollapsed ? 'collapsed isMenue' : ''}`}>
@@ -82,7 +73,7 @@ const Sidebar = () => {
             <span className='icon-item'>Manual Payment</span>
           </Link>
           <Link href="/manualtransaction" className="nav-item" >
-            <span className="nav-icon"><FontAwesomeIcon icon={faBuildingColumns} /></span>
+            <span className="nav-icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
             <span className='icon-item'>Manual Transactions</span>
           </Link>
         </li>
@@ -94,7 +85,7 @@ const Sidebar = () => {
           </Link>
         </li>
         <li>
-          <Link href="#" className="nav-item">
+          <Link href="https://wa.me/message/EN46VSWDDR5HG1" className="nav-item" target='_blank'>
             <span className="nav-icon"><i className="fa-solid fa-address-book"></i></span>
             <span className='icon-item'>Customer Care</span>
           </Link>
@@ -122,13 +113,13 @@ const Sidebar = () => {
       </li>
       <li>
           <Link href="/mangemanualtransaction" className="nav-item">
-            <span className="nav-icon"><i class="fa-solid fa-plus"></i></span>
+            <span className="nav-icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
             <span className='icon-item'>Manual Transaction</span>
           </Link>
         </li>
       <li>
         <Link href="/transactionhistory" className="nav-item">
-          <span className="nav-icon"><i class="fa-solid fa-bars-progress"></i></span>
+          <span className="nav-icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
           <span className='icon-item'>Transaction History</span>
         </Link>
       </li>

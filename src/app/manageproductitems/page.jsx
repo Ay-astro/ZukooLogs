@@ -1,15 +1,55 @@
 'use client'
 import { useContext } from "react";
 import IndexContext from '@/app/IndexContext';
-import ManageProductComp from "../components/ManageProductComp"
 import styles from '../components/manageproductcomp.module.css';
 
 function page() {
-  const {isModalOpen, currentCategory,formData, handleInputChange,closeModal,handleSubmit,categories}= useContext(IndexContext)
+  const {isModalOpen, currentCategory,formData, handleInputChange,closeModal,handleSubmit,categories,openModal,handleDelete}= useContext(IndexContext)
   return (
     <div>
       <div>
-      <ManageProductComp manage="Manage Product Items" isManage={true} ManageItems={true} />
+      <div className={styles.container}>
+          <h1>Manage Product Items</h1>
+          <button onClick={() => openModal()} className={styles.createButton}>
+          Create Item
+          </button>
+    
+          <div className={styles.tablecontainer}>
+          <table className={styles.table}>
+            <thead>
+                <tr>
+                <th>Item</th>
+                <th>Status</th>
+                <th>Product</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+             <tbody>
+             {categories.map((category, index) => (
+               <tr key={index}>
+                 <td>{category.title}</td>
+                 <td>{category.status}</td>
+                 <td>{category.product}</td>
+                 <td>
+                   <button
+                     onClick={() => openModal(category)}
+                     className={styles.editButton}
+                   >
+                     Edit
+                   </button>
+                   <button
+                     onClick={() => handleDelete(category.title)}
+                     className={styles.deleteButton}
+                   >
+                     Delete
+                   </button>
+                 </td>
+               </tr>
+             ))}
+           </tbody>
+          </table>
+          </div>
+        </div>
     </div>
     {isModalOpen && (
             <div className={styles.overlay}>

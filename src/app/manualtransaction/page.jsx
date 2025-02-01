@@ -4,7 +4,7 @@ import IndexContext from '@/app/IndexContext';
 import styles from '../components/manageproductcomp.module.css';
 
 function page() {
-    const {categories,setApproval}= useContext(IndexContext)
+    const {categories}= useContext(IndexContext)
 
 
       return (

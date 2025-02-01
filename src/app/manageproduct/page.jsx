@@ -1,18 +1,62 @@
 'use client'
 import { useContext } from "react";
 import IndexContext from '@/app/IndexContext';
-import ManageProductComp from "../components/ManageProductComp"
 import styles from '../components/manageproductcomp.module.css';
 
 
 
 function page() {
-  const {isModalOpen, currentCategory,formData, handleInputChange,closeModal,handleSubmit,categories}= useContext(IndexContext)
+  const {isModalOpen, currentCategory,formData, handleInputChange,closeModal,handleSubmit,categories,openModal,handleDelete}= useContext(IndexContext)
 
   return (
     <div>
       <div>
-      <ManageProductComp manage="Manage Product" isManage={true} ManageItems={false} />
+      <div className={styles.container}>
+          <h1>Manage Product</h1>
+            <button onClick={() => openModal()} className={styles.createButton}>
+            Create Product
+          </button>
+    
+          <div className={styles.tablecontainer}>
+          <table className={styles.table}>
+            <thead>
+                <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Country</th>
+                <th>Amount</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+           {(
+             <tbody>
+             {categories.map((category, index) => (
+               <tr key={index}>
+                  <td>{category.title}</td>
+                  <td>{category.description}</td>
+                  <td>{category.country}</td>
+                  <td>{category.amount}</td>
+                 <td>
+                   <button
+                     onClick={() => openModal(category)}
+                     className={styles.editButton}
+                   >
+                     Edit
+                   </button>
+                   <button
+                     onClick={() => handleDelete(category.title)}
+                     className={styles.deleteButton}
+                   >
+                     Delete
+                   </button>
+                 </td>
+               </tr>
+             ))}
+           </tbody>
+           )}
+          </table>
+          </div>
+        </div>
     </div>
     {isModalOpen && (
             <div className={styles.overlay}>

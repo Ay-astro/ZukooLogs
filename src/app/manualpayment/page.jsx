@@ -4,11 +4,11 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBuildingColumns} from '@fortawesome/free-solid-svg-icons'
 import Spinner from '../components/Spinner'
 import IndexContext from '@/app/IndexContext';
-// import { FaRegCopy, FaUniversity } from "react-icons/fa";
 import styles from './manualpayment.module.css'
+import {accountDetails} from '../components/dashboard/productdata'
 
 export default function ManualPayment() {
-  const {loading,setLoading,receipt,setReceipt,amount,setAmount}= useContext(IndexContext) 
+  const {loading,setLoading,handleSubmitManual,amount,setAmount,handleCopyToClipboard,handleReceiptChange}= useContext(IndexContext) 
 
   useEffect(()=>{
     const timer = setTimeout(() => {
@@ -17,31 +17,12 @@ export default function ManualPayment() {
 
     return () => clearTimeout(timer);
 },[])
-  const accountDetails = {
-    name: "John Doe",
-    bank: "Sample Bank",
-    accountNumber: "1234567890",
-  };
+  // const accountDetails = {
+  //   name: "John Doe",
+  //   bank: "Sample Bank",
+  //   accountNumber: "1234567890",
+  // };
 
-  const handleCopyToClipboard = () => {
-    navigator.clipboard.writeText(accountDetails.accountNumber);
-  };
-
-  const handleReceiptChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setReceipt(file);
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!receipt || !amount) {
-      alert("Please upload a receipt and enter the amount.");
-      return;
-    }
-    // Add logic to handle the submission, like an API call
-  };
 
   if(!loading){
     return (
@@ -74,7 +55,7 @@ export default function ManualPayment() {
           </div>
   
           {/* Payment Form */}
-          <form onSubmit={handleSubmit} className={styles.form}>
+          <form onSubmit={handleSubmitManual} className={styles.form}>
             <div className={styles.formGroup}>
               <label>Upload Receipt:</label>
               <input

@@ -1,9 +1,11 @@
 'use client'
 import { createContext, useState } from "react"
 
-import { productFullData, purchaseData } from "./components/dashboard/productdata"
+import { productFullData, purchaseData, categoriesData,formDataValue, priceValue } from "./components/dashboard/productdata"
 const   IndexContext = createContext()
 export function IndexProvider({children}) {
+
+
     const [loading, setLoading] = useState(true) 
     const[menue,setMenue]=useState(false)
     const [isCollapsed, setIsCollapsed] = useState(false);
@@ -11,44 +13,44 @@ export function IndexProvider({children}) {
     const [login, setLogin] = useState(false)
     const [profile, setProfile] = useState(false)
     const [products, setProducts] = useState(productFullData)
+
+    const [product, setProduct] = useState(productFullData)
+    const [activeDropdown, setActiveDropdown] = useState(null);
+
     const [productName, setProductName] = useState("")
     const [closeBuy, setCloseBuy] = useState(true)
     const [quantity, setQuantity] = useState("");
     const [inputValue, setInputValue] = useState('');
     const [history, setHistory] = useState(purchaseData);
+    const [isAdmin, setAdmin ] = useState(true)
   
     // MANAGE PRODUCT STATE
-    const [categories, setCategories] = useState([
-        {id: 1, title: "Laptops", description: "All kinds of laptops.",categorie: "Electronics, Laptops",amount: "1500", product: "Electronics",country: 'USA', date: "2025-01-20", user: 'Astro',status: 'Pending' },
-        {id: 2, title: "Phones", description: "Smartphones and feature phones.",categorie: "Clothing, Shoes", amount: "1000", product: "Clothing", country: 'USA', date: "2025-01-22",user: 'black',status: 'Pending'  },
-        { id: 3,title: "Accessories", description: "Gadgets and device add-ons.",categorie: "Electronics, Phones", amount: "20", product: "Electronics", country: 'USA', date: "2025-01-23",user: 'Saad',status: 'Approved'  },
-        {id: 4, title: "Men's Clothing", description: "Clothing and apparel for men.",categorie: "Electronics, Accessories",amount: "50", product: "Electronics",country: 'USA', date: "2025-01-25",user: 'Ys',status: 'Pending' },
-        {id: 5, title: "Women's Clothing", description: "Clothing and apparel for women.",categorie: "Clothing, Men",amount: "100", product: "Clothing",country: 'USA', date: "2025-01-26",user: 'Hello',status: 'Approved' },
-      ]);
+    const [categories, setCategories] = useState(categoriesData);
       const [approval, setApproval] = useState([false])
       const [isModalOpen, setIsModalOpen] = useState(false);
       const [currentCategory, setCurrentCategory] = useState(null);
-      const [formData, setFormData] = useState({
-        id: null,
-        title: "",
-        description: "",
-        categories:"",
-        amount: "",
-        product: "",
-        date: "",
-        user:"user"
-      });
+      const [formData, setFormData] = useState(formDataValue);
     //   END OF MANAGE PRODUCT
-    const [price, setPrice] = useState({
-        price: 0,
-        title:'',
-        id: '',
-    });
+    const [price, setPrice] = useState(priceValue);
     // MANUAL PAYMENT STATE
     const [receipt, setReceipt] = useState(null);
     const [amount, setAmount] = useState("");
     //Edit Mode for Manage Product
     const [editProduct, setEditProduct] = useState(false)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     const handleProfile=()=>{
         setProfile(!profile)
@@ -142,13 +144,40 @@ export function IndexProvider({children}) {
       };
     
       // Delete category
-      // const handleDelete = (title) => {
-      //   setCategories((prev) => prev.filter((c) => c.title !== title));
-      // };
+      const handleDelete = (title) => {
+        setCategories((prev) => prev.filter((c) => c.title !== title));
+      };
     
+// Manual Payment
 
+const handleCopyToClipboard = () => {
+  navigator.clipboard.writeText(accountDetails.accountNumber);
+};
 
+const handleReceiptChange = (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    setReceipt(file);
+  }
+};
 
+const handleSubmitManual = (e) => {
+  e.preventDefault();
+  if (!receipt || !amount) {
+    alert("Please upload a receipt and enter the amount.");
+    return;
+  }
+};
+
+// side Bar toggle
+
+const toggleSidebar = () => {
+  setIsCollapsed(!isCollapsed);
+};
+
+const toggleDropdown = (index) => {
+setActiveDropdown(activeDropdown === index ? null : index);
+};
 
 
 
@@ -161,14 +190,22 @@ export function IndexProvider({children}) {
 
     return <IndexContext.Provider value={{
     setApproval,
+    setActiveDropdown,
+    toggleDropdown,
+    toggleSidebar,
+    setAdmin,
     setProductName,
+    setProduct,
     setLoading,
     setCurrentCategory,
     setIsModalOpen,
     setCategories,
+    handleCopyToClipboard,
     handleMenue,
+    handleReceiptChange,
     setIsCollapsed,
     handleLogin,
+    handleSubmitManual,
     handleProfile,
     handleSubitems,
     handleClose,
@@ -205,7 +242,10 @@ export function IndexProvider({children}) {
     receipt,
     amount,
     loading,
-    editProduct
+    editProduct,
+    isAdmin,
+    product,
+    activeDropdown
     }} >
         {children}
     </IndexContext.Provider>

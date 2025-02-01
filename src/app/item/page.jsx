@@ -1,8 +1,7 @@
 'use client'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCopy, faDownload} from '@fortawesome/free-solid-svg-icons'
-// import { FaCopy, FaDownload } from "react-icons/fa";
-import styles from"./seemore.module.css"; // Import CSS
+import styles from"./seemore.module.css";
 
 const Page = () => {
   const resources = [

@@ -31,6 +31,39 @@ const productdata= [
     },
 ]
 
+export const accountDetails = {
+    name: "John Doe",
+    bank: "Sample Bank",
+    accountNumber: "1234567890",
+};
+
+
+
+export const  categoriesData =[
+    {id: 1, title: "Laptops", description: "All kinds of laptops.",categorie: "Electronics, Laptops",amount: "1500", product: "Electronics",country: 'USA', date: "2025-01-20", user: 'Astro',status: 'Pending' },
+    {id: 2, title: "Phones", description: "Smartphones and feature phones.",categorie: "Clothing, Shoes", amount: "1000", product: "Clothing", country: 'USA', date: "2025-01-22",user: 'black',status: 'Pending'  },
+    { id: 3,title: "Accessories", description: "Gadgets and device add-ons.",categorie: "Electronics, Phones", amount: "20", product: "Electronics", country: 'USA', date: "2025-01-23",user: 'Saad',status: 'Approved'  },
+    {id: 4, title: "Men's Clothing", description: "Clothing and apparel for men.",categorie: "Electronics, Accessories",amount: "50", product: "Electronics",country: 'USA', date: "2025-01-25",user: 'Ys',status: 'Pending' },
+    {id: 5, title: "Women's Clothing", description: "Clothing and apparel for women.",categorie: "Clothing, Men",amount: "100", product: "Clothing",country: 'USA', date: "2025-01-26",user: 'Hello',status: 'Approved' },
+]
+
+export const formDataValue = {
+    id: null,
+    title: "",
+    description: "",
+    categories:"",
+    amount: "",
+    product: "",
+    date: "",
+    user:"user"
+}
+
+export const priceValue = {
+    price: 0,
+    title:'',
+    id: '',
+}
+
 
 export const productFullData =[
     {   id: 1,

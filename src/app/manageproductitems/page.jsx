@@ -70,37 +70,6 @@ function page() {
                       className={styles.input}
                     />
                   </div>
-                  {/* <div className={styles.formGroup}>
-                    <label>Description</label>
-                    <textarea
-                      name="description"
-                      value={formData.description}
-                      onChange={handleInputChange}
-                      required
-                      className={styles.textarea}
-                    />
-                  </div> */}
-                  {/* <div className={styles.formGroup}>
-                    <label>Country</label>
-                    <textarea
-                      name="country"
-                      value={formData.country}
-                      onChange={handleInputChange}
-                      required
-                      className={styles.textarea}
-                    />
-                  </div> */}
-                  {/* <div className={styles.formGroup}>
-                  <label>Amount</label>
-                  <input
-                  type="number"
-                  name="amount"
-                  value={formData.amount}
-                  onChange={handleInputChange}
-                  required
-                  className={styles.input}
-                />
-                  </div> */}
                   <div className={styles.formGroup}>
                   <label>Product</label>
                   <select

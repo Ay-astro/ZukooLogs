@@ -218,7 +218,7 @@ setActiveDropdown(activeDropdown === index ? null : index);
     openModal,
     closeModal,
     handleSubmit,
-    // handleDelete,
+    handleDelete,
     setReceipt,
     setAmount,
     setLogin,

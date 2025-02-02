@@ -49,7 +49,7 @@ export default function ManualPayment() {
                 className={styles.copyIcon}
                 onClick={handleCopyToClipboard}
               /> */}
-              <i class="fa-solid fa-copy" className={styles.copyIcon}
+              <i className="fa-solid fa-copy" className={styles.copyIcon}
                 onClick={handleCopyToClipboard}></i>
             </p>
           </div>

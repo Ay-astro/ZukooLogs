@@ -53,7 +53,7 @@ const page = () => {
             )}
           </div>
         ))}
-        <div><a href="#"  className={styles.iconCustomercare}>
+        <div><a href="https://wa.me/message/EN46VSWDDR5HG1" target="_blank"  className={styles.iconCustomercare}>
             <span className={styles.customerCareImage}>
             <Image src={customerCare} alt="Loading" className={styles.customerCare} />
             </span>

@@ -48,7 +48,7 @@ const Sidebar = () => {
           <ul className="dropdown-menu">
             {
               product.map((items)=>(
-                <li><Link href="#" className="dropdown-item" key={items.id} onClick={()=>handleSubitems(items.id)}>{items.subname}</Link></li>
+                <li key={items.id}><Link href="#" className="dropdown-item"  onClick={()=>handleSubitems(items.id)}>{items.subname}</Link></li>
               ))
             }
           </ul>
@@ -73,13 +73,13 @@ const Sidebar = () => {
             <span className='icon-item'>Manual Payment</span>
           </Link>
           <Link href="/manualtransaction" className="nav-item" >
-            <span className="nav-icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
+            <span className="nav-icon"><i className="fa-solid fa-clock-rotate-left"></i></span>
             <span className='icon-item'>Manual Transactions</span>
           </Link>
         </li>
         <li>
           {!isCollapsed && <p className='others'>OTHERS</p> }
-          <Link href="#" className="nav-item">
+          <Link href="/faqs" className="nav-item">
             <span className="nav-icon"><i className="fa-regular fa-circle-question fa-lg"></i></span>
             <span className='icon-item'>FAQ</span>
           </Link>
@@ -95,31 +95,31 @@ const Sidebar = () => {
             <ul>
         <li>
         <Link href="/manageproduct" className="nav-item">
-          <span className="nav-icon"><i class="fa-solid fa-bars-progress"></i></span>
+          <span className="nav-icon"><i className="fa-solid fa-bars-progress"></i></span>
           <span className='icon-item'>Manage Products</span>
         </Link>
       </li>
       <li>
         <Link href="/manageproductcategory" className="nav-item">
-          <span className="nav-icon"><i class="fa-solid fa-bars-progress"></i></span>
+          <span className="nav-icon"><i className="fa-solid fa-bars-progress"></i></span>
           <span className='icon-item'>Manage Category</span>
         </Link>
       </li>
       <li>
         <Link href="/manageproductitems" className="nav-item">
-          <span className="nav-icon"><i class="fa-solid fa-bars-progress"></i></span>
+          <span className="nav-icon"><i className="fa-solid fa-bars-progress"></i></span>
           <span className='icon-item'>Manage Items</span>
         </Link>
       </li>
       <li>
           <Link href="/mangemanualtransaction" className="nav-item">
-            <span className="nav-icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
+            <span className="nav-icon"><i className="fa-solid fa-clock-rotate-left"></i></span>
             <span className='icon-item'>Manual Transaction</span>
           </Link>
         </li>
       <li>
         <Link href="/transactionhistory" className="nav-item">
-          <span className="nav-icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
+          <span className="nav-icon"><i className="fa-solid fa-clock-rotate-left"></i></span>
           <span className='icon-item'>Transaction History</span>
         </Link>
       </li>

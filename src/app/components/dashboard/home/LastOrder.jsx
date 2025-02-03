@@ -13,7 +13,7 @@ function LastOrder() {
             <tbody>
                 <tr>
                     <td>
-                        <span><i class="fa-solid fa-cart-shopping fa-lx"></i></span>
+                        <span><i className="fa-solid fa-cart-shopping fa-lx"></i></span>
                         <span className={styles.y}>...y </span>
                         <span className={styles.buy}>Buy </span>
                         <span className={styles.number}> 2</span>

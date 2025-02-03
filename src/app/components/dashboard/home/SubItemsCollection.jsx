@@ -8,7 +8,7 @@ function SubItemsCollection() {
     <div>
       {
         products.map((items)=>(
-            <SubItems item={items}/>
+            <SubItems item={items} key={items.id}/>
         ))
       }
     </div>

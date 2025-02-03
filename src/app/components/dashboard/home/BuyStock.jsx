@@ -36,7 +36,7 @@ function BuyStock() {
     <div className={`overlay ${closeBuy ? 'closeOverlay' : '' }`}>
       <div className={styles.container}>
         <button className={styles.closeButton} onClick={handleClose}>
-        <i class="fa-solid fa-circle-xmark fa-lg"></i>
+        <i className="fa-solid fa-circle-xmark fa-lg"></i>
         </button>
         <div className={styles.content}>
           <div className={styles.inputGroup}>

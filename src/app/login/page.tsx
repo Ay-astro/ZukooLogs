@@ -7,6 +7,7 @@ import logo from "../logoimg.jpg";
 import Spinner from '../components/Spinner'
 import IndexContext from '@/app/IndexContext';
 
+
 interface LoginProps {}
 export const Login: React.FC<LoginProps> = () => {
   const {loading,setLoading}= useContext(IndexContext)

@@ -36,11 +36,11 @@ function SubItems({item}) {
                 </thead>
                 {
                     
-                    subCategories.map((item)=>(
-                        <tbody>
+                    subCategories.map((item, index)=>(
+                        <tbody key={index}>
                         <tr>
                             <td>
-                                <span className={styles.stockIcon}><i class="fa-solid fa-cart-shopping fa-xl "></i></span>
+                                <span className={styles.stockIcon}><i className="fa-solid fa-cart-shopping fa-xl "></i></span>
                                 <div>
                                 <div className={styles.subItenText}>
                                     <h4>
@@ -50,11 +50,11 @@ function SubItems({item}) {
                                 </div>
                                 <div className={styles.mobilebtn}>
                                 <div className={styles.mobileABB}>
-                                    <span className={styles.buyMobile}><i class="fa-solid fa-money-bill iconspace fa-lg"></i>&#8358; {item.price}</span>
+                                    <span className={styles.buyMobile}><i className="fa-solid fa-money-bill iconspace fa-lg"></i>&#8358; {item.price}</span>
                                     <span className={styles.availableMoblie}>Available: {item.available}</span>
                                 </div>
                                 <div>
-                                    <button className={styles.buybtnMobile} onClick={()=>handlebuy(item,id)}><i class="fa-solid fa-cart-shopping fa-lx"></i>{item.available <1 ?'Out Of Stock' : 'Buy Now'}</button>
+                                    <button className={styles.buybtnMobile} onClick={()=>handlebuy(item,id)}><i className="fa-solid fa-cart-shopping fa-lx"></i>{item.available <1 ?'Out Of Stock' : 'Buy Now'}</button>
                                 </div>
                                 </div>
                                 </div>
@@ -66,11 +66,11 @@ function SubItems({item}) {
                                 <span className={styles.available}>Available:{item.available}</span>
                             </td>
                             <td>
-                                <span className={styles.buy}><i class="fa-solid fa-money-bill iconspace "></i>&#8358;{item.price}</span>
+                                <span className={styles.buy}><i className="fa-solid fa-money-bill iconspace "></i>&#8358;{item.price}</span>
                             </td>
                             <td>
                                 <div>
-                                <button className={styles.buybtn} disabled={item.available < 1  ? true: false} onClick={()=>handlebuy(item,id)}><i class="fa-solid fa-cart-shopping fa-lx"></i>{item.available <1 ?'Out Of Stock' : 'Buy Now'}</button>
+                                <button className={styles.buybtn} disabled={item.available < 1  ? true: false} onClick={()=>handlebuy(item,id)}><i className="fa-solid fa-cart-shopping fa-lx"></i>{item.available <1 ?'Out Of Stock' : 'Buy Now'}</button>
                                 </div>
                             </td>
                         </tr>

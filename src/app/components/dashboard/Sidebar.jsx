@@ -79,7 +79,7 @@ const Sidebar = () => {
         </li>
         <li>
           {!isCollapsed && <p className='others'>OTHERS</p> }
-          <Link href="#" className="nav-item">
+          <Link href="/faqs" className="nav-item">
             <span className="nav-icon"><i className="fa-regular fa-circle-question fa-lg"></i></span>
             <span className='icon-item'>FAQ</span>
           </Link>

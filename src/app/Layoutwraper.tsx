@@ -2,6 +2,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import {ToastContainer} from 'react-toastify';
 import Sidebar from "./components/dashboard/Sidebar";
 import Footer from "./components/Footer";
 import Topbar from "./components/Topbar";
@@ -27,6 +28,18 @@ export default function LayoutWrapper({
       {shouldShowHeaderFooter && <Footer />}
     </div>
     <BuyStock/>
+    <ToastContainer  
+      position="top-right"
+      autoClose={2000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick={false}
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"
+    />
     </main>
     </>
   );

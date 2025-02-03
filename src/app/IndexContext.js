@@ -1,6 +1,6 @@
 'use client'
 import { createContext, useState } from "react"
-
+import { toast } from "react-toastify"
 import { productFullData, purchaseData, categoriesData,formDataValue, priceValue } from "./components/dashboard/productdata"
 const   IndexContext = createContext()
 export function IndexProvider({children}) {
@@ -136,6 +136,7 @@ export function IndexProvider({children}) {
           setCategories((prev) =>
             prev.map((c) => (c.title === currentCategory.title ? formData : c))
           );
+          toast.success('Item Successfully Updated')
         } else {
           // Create new category
           setCategories((prev) => [...prev, formData]);
@@ -146,6 +147,7 @@ export function IndexProvider({children}) {
       // Delete category
       const handleDelete = (title) => {
         setCategories((prev) => prev.filter((c) => c.title !== title));
+        toast.error("Item Deleted Successfully" )
       };
     
 // Manual Payment
